@@ -1,0 +1,38 @@
+.step-navigation {
+    align-items: center;
+    background-color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: absolute;
+    width: 100vw;
+}
+
+.step-navigation button {
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    padding: .7rem .9rem;
+}
+
+.step-navigation button.back {
+    background-color: transparent;
+    color: var(--cool-gray);
+}
+
+.step-navigation :where(button.next, button.confirm) {
+    border-radius: .3rem;
+    color: white;
+    margin-left: auto;
+    width: 6rem;
+}
+
+.step-navigation button.next {
+    background-color: var(--marine-blue);
+}
+
+.step-navigation button.confirm {
+    background-color: var(--purplish-blue);
+}

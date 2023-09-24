@@ -1,0 +1,19 @@
+.steps-content {
+    background-color: white;
+    border-radius: .6rem;
+    color: var(--marine-blue);
+    margin-inline: 1rem;
+    padding: 1.4rem;
+}
+
+.steps-content section {
+    display: none;
+}
+
+.steps-content section.active {
+    display: block;
+}
+
+.steps-content section.confirm {
+    text-align: center;
+}

@@ -1,0 +1,39 @@
+.step-info {
+    position: relative;
+}
+
+.step-info .background-image {
+    background: url(../assets/images/bg-sidebar-mobile.svg) center/cover no-repeat;
+    height: 172px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.step-info .steps {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.step-info .step {
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    font-weight: 500;
+    height: 2rem;
+    justify-content: center;
+    padding: 1rem;
+    width: 2rem;
+}
+
+.step-info .step.active {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+    color: var(--marine-blue);
+}

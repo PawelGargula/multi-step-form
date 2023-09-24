@@ -1,0 +1,10 @@
+h2 {
+    font-size: 1.5rem;
+    margin-block: .6rem;
+}
+
+p {
+    color: var(--cool-gray);
+    text-wrap: balance;
+    line-height: 1.6;
+}

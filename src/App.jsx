@@ -1,10 +1,21 @@
 import './App.css'
+import StepInfo from './Components/StepInfo';
+import StepsContent from './Components/StepsContent';
+import StepNavigation from './Components/StepNavigation';
+import { useState } from 'react';
 
 function App() {
+  const stepsLength = 4;
+  const [currentStep, setCurrentStep] = useState(1);
+  const [isConfirmed, setIsConfirmed] = useState(false);
+
   return (
-    <>
-      
-        {/* <!-- Sidebar start --> */}
+    <form onSubmit={e => {e.preventDefault(); setIsConfirmed(true)}}>
+      <StepInfo stepsLength={stepsLength} currentStep={currentStep} />
+      <StepsContent currentStep={currentStep} isConfirmed={isConfirmed} />
+      <StepNavigation stepsLength={stepsLength} currentStep={currentStep} setCurrentStep={setCurrentStep} isConfirmed={isConfirmed} />
+
+      {/* <!-- Sidebar start -->
 
       Step 1
       Your info
@@ -18,9 +29,9 @@ function App() {
       Step 4
       Summary
 
-      {/* <!-- Sidebar end --> */}
+      <!-- Sidebar end --> 
 
-      {/* <!-- Step 1 start --> */}
+      <!-- Step 1 start --> 
 
       Personal info
       Please provide your name, email address, and phone number.
@@ -36,9 +47,9 @@ function App() {
 
       Next Step
 
-      {/* <!-- Step 1 end --> */}
+      <!-- Step 1 end --> 
 
-      {/* <!-- Step 2 start --> */}
+      <!-- Step 2 start --> 
 
       Select your plan
       You have the option of monthly or yearly billing.
@@ -58,9 +69,9 @@ function App() {
       Go Back
       Next Step
 
-      {/* <!-- Step 2 end --> */}
+      <!-- Step 2 end --> 
 
-      {/* <!-- Step 3 start --> */}
+      <!-- Step 3 start --> 
 
       Pick add-ons
       Add-ons help enhance your gaming experience.
@@ -80,23 +91,23 @@ function App() {
       Go Back
       Next Step
 
-      {/* <!-- Step 3 end --> */}
+      <!-- Step 3 end --> 
 
-      {/* <!-- Step 4 start --> */}
+      <!-- Step 4 start --> 
 
       Finishing up
       Double-check everything looks OK before confirming.
 
-      {/* <!-- Dynamically add subscription and add-on selections here --> */}
+      <!-- Dynamically add subscription and add-on selections here --> 
 
       Total (per month/year)
 
       Go Back
       Confirm
 
-      {/* <!-- Step 4 end --> */}
+      <!-- Step 4 end --> 
 
-      {/* <!-- Step 5 start --> */}
+      <!-- Step 5 start --> 
 
       Thank you!
 
@@ -104,13 +115,13 @@ function App() {
       using our platform. If you ever need support, please feel free 
       to email us at support@loremgaming.com.
 
-      {/* <!-- Step 5 end --> */}
+      <!-- Step 5 end --> 
 
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Your Name Here</a>.
-      </div>
-    </>
+      </div> */}
+    </form>
   )
 }
 
