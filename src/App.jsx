@@ -3,17 +3,54 @@ import StepInfo from './Components/StepInfo';
 import StepsContent from './Components/StepsContent';
 import StepNavigation from './Components/StepNavigation';
 import { useState } from 'react';
+import { useForm } from "react-hook-form";
 
 function App() {
   const stepsLength = 4;
   const [currentStep, setCurrentStep] = useState(1);
   const [isConfirmed, setIsConfirmed] = useState(false);
 
+  const {
+    register,
+    handleSubmit,
+    watch,
+    trigger,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange"
+  });
+
+  const onSubmit = (data) => {
+    console.log(data);
+    setIsConfirmed(true);
+  };
+
+  const isStepValid = async () => {
+    switch(currentStep) {
+      case 1:
+        return await trigger(["name", "email", "phoneNumber"]);
+      default:
+        return true;
+    }
+  }
+
   return (
-    <form onSubmit={e => {e.preventDefault(); setIsConfirmed(true)}}>
+    <form onSubmit={handleSubmit(onSubmit)} onKeyDown={(e) => e.key === "Enter" && e.preventDefault()}>
       <StepInfo stepsLength={stepsLength} currentStep={currentStep} />
-      <StepsContent currentStep={currentStep} isConfirmed={isConfirmed} />
-      <StepNavigation stepsLength={stepsLength} currentStep={currentStep} setCurrentStep={setCurrentStep} isConfirmed={isConfirmed} />
+      <StepsContent 
+        currentStep={currentStep} 
+        isConfirmed={isConfirmed} 
+        register={register} 
+        watch={watch} 
+        errors={errors} 
+      />
+      <StepNavigation 
+        stepsLength={stepsLength} 
+        currentStep={currentStep} 
+        setCurrentStep={setCurrentStep} 
+        isConfirmed={isConfirmed} 
+        isStepValid={isStepValid}
+      />
 
       {/* <!-- Sidebar start -->
 

@@ -17,3 +17,46 @@
 .steps-content section.confirm {
     text-align: center;
 }
+
+.steps-content .label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    color: var(--marine-blue);
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+input {
+    border: 1px solid var(--light-gray);
+    border-radius: .3rem;
+    color: var(--marine-blue);
+    display: block;
+    font-size: .9rem;
+    font-weight: 700;
+    padding: .7rem;
+    width: 100%;
+    margin-block: .2rem 1rem;
+}
+
+input.invalid {
+    border-color: var(--strawberry-red);
+}
+
+input::placeholder {
+    color: var(--cool-gray);
+    font-weight: 700;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid var(--purplish-blue);
+}
+
+span.error {
+    color: var(--strawberry-red);
+    font-weight: 700;
+    margin-left: auto;
+}
