@@ -1,7 +1,6 @@
 import ContentHeader from "./ContentHeader";
 import { useContext } from "react";
 import { RegisterContext } from "../Contexts/RegisterContext";
-import { ErrorsContext } from "../Contexts/ErrorsContext";
 import { WatchContext } from "../Contexts/WatchContext";
 import "./SelectPlan.css";
 import arcadeIcon from '../assets/images/icon-arcade.svg';
@@ -11,7 +10,6 @@ import { pricePlans } from "../data/plans";
 
 export default function SelectPlan() {
     const register = useContext(RegisterContext);
-    const errors = useContext(ErrorsContext);
     const watch = useContext(WatchContext);
 
     return (
