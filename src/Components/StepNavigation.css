@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    position: absolute;
+    position: fixed;
     width: 100vw;
 }
 
@@ -14,18 +14,19 @@
     font-family: 'Ubuntu', sans-serif;
     font-size: .9rem;
     font-weight: 500;
-    padding: .7rem .9rem;
 }
 
 .step-navigation button.back {
     background-color: transparent;
     color: var(--cool-gray);
+    padding: 0;
 }
 
 .step-navigation :where(button.next, button.confirm) {
     border-radius: .3rem;
     color: white;
     margin-left: auto;
+    padding: .7rem .9rem;
     width: 6rem;
 }
 

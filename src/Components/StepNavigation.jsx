@@ -4,7 +4,7 @@ export default function StepNavigation({currentStep, setCurrentStep, stepsLength
     return (
         !isConfirmed &&
         <div className="step-navigation">
-            {currentStep > 1 && !(currentStep > stepsLength) && <button className="back" onClick={() => setCurrentStep(currentStep - 1)} type="button">Go back</button>}
+            {currentStep > 1 && !(currentStep > stepsLength) && <button className="back" onClick={() => setCurrentStep(currentStep - 1)} type="button">Go Back</button>}
             {currentStep < stepsLength && <button className="next" onClick={async () => 
                 await isStepValid() && setCurrentStep(currentStep + 1)
             } type="button">Next Step</button>}
