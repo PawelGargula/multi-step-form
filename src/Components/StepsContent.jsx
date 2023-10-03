@@ -2,7 +2,7 @@ import "./StepsContent.css";
 import ContentHeader from "./ContentHeader";
 import PersonalInfo from "./PersonalInfo";
 import SelectPlan from "./SelectPlan";
-
+import Addons from "./Addons";
 
 export default function StepsContent({currentStep, isConfirmed}) {
     return (
@@ -14,7 +14,7 @@ export default function StepsContent({currentStep, isConfirmed}) {
                 <SelectPlan />
             </section>
             <section className={currentStep === 3 && !isConfirmed ? "active" : ""}>
-                <ContentHeader header="Pick add-ons" paragraph="Add-ons help enhance your gaming experience."/>
+                <Addons />
             </section>
             <section className={currentStep === 4 && !isConfirmed ? "active" : ""}>
                 <ContentHeader header="Finishing up" paragraph="Double-check everything looks OK before confirming."/>

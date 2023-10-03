@@ -5,12 +5,11 @@ input[type="radio"] {
     /* For iOS < 15 to remove gradient background */
     background-color: #fff;
     /* Not removed via appearance */
-    /* display: none; */
+    border: none;
     height: 0;
-    width: 0;
     margin: 0;
     padding: 0;
-    border: none;
+    width: 0;
 }
 
 .radio-input {

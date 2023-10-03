@@ -1,0 +1,80 @@
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    border: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    width: 0;
+}
+
+input[type="checkbox"]+.checkbox-input {
+    --padding-inline: 0.9rem;
+    align-items: center;
+    border: 1px solid var(--light-gray);
+    border-radius: .4rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: .6rem;
+    padding-block: .6rem;
+    padding-inline: var(--padding-inline);
+}
+
+input[type="checkbox"]:checked+.checkbox-input {
+    border-color: var(--purplish-blue);
+    background-color: var(--alabaster);
+}
+
+input[type="checkbox"]:focus-visible+.checkbox-input {
+    border-color: black;
+}
+
+.checkbox-input .checkbox {
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    height: 20px;
+    margin-right: var(--padding-inline);
+    position: relative;
+    width: 20px;
+}
+
+input[type="checkbox"]:checked+.checkbox-input .checkbox {
+    background-color: var(--purplish-blue);
+}
+
+input[type="checkbox"]:checked+.checkbox-input .checkbox::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkbox-input .checkbox-label {
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.checkbox-input p {
+    font-size: .75rem;
+    font-weight: 500;
+    margin: 0;
+    margin-left: auto;
+}
+
+.checkbox-input .price {
+    color: var(--purplish-blue);
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: auto;
+}

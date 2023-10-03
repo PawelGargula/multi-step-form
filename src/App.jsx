@@ -10,7 +10,7 @@ import { WatchContext } from './Contexts/WatchContext';
 
 function App() {
   const stepsLength = 4;
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(3);
   const [isConfirmed, setIsConfirmed] = useState(false);
 
   const {
