@@ -61,3 +61,9 @@ span.error {
     font-weight: 700;
     margin-left: auto;
 }
+
+img[alt="Checkmark icon"] {
+    height: 3.2rem;
+    margin-block: 3rem .6rem;
+    width: 3.2rem;
+}

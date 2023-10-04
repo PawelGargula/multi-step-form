@@ -1,0 +1,65 @@
+.space-between {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finishing-up {
+    --gap: .8rem;
+}
+
+.confirmation {
+    background-color: var(--alabaster);
+    border-radius: .6rem;
+    padding-inline: var(--gap);
+    padding-block: 1rem;
+}
+
+.confirmation .plan {
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: var(--gap);
+}
+
+.confirmation .plan span {
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.confirmation .plan button.change {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--cool-gray);
+    color: var(--cool-gray);
+    display: block;
+    margin-top: .1rem;
+    padding: 0;
+}
+
+.confirmation .add-ons {
+    margin-top: var(--gap);
+}
+
+.confirmation .add-ons .name {
+    color: var(--cool-gray);
+    font-size: .9rem;
+}
+
+.confirmation .add-ons .cost {
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.total {
+    margin-block: 1.6rem .6rem;
+    padding-inline: var(--gap);
+}
+
+.total-tag {
+    color: var(--cool-gray);
+    font-size: .9rem;
+}
+
+.total-cost {
+    color: var(--purplish-blue);
+    font-weight: 700;
+}

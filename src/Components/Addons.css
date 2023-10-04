@@ -13,7 +13,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]+.checkbox-input {
-    --padding-inline: 0.9rem;
+    --padding-inline: 0.8rem;
     align-items: center;
     border: 1px solid var(--light-gray);
     border-radius: .4rem;
