@@ -63,3 +63,23 @@
     color: var(--purplish-blue);
     font-weight: 700;
 }
+
+@media (min-width: 1100px) {
+    .finishing-up {
+        --gap: 1.4rem;
+    }
+
+    .confirmation .plan button.change {
+        margin-top: .2rem;
+        cursor: pointer;
+    }
+
+    .confirmation .plan button.change:hover {
+        border-color: var(--purplish-blue);
+        color: var(--purplish-blue);
+    }
+
+    .total-cost {
+        font-size: 1.1rem;
+    }
+}

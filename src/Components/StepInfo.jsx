@@ -7,9 +7,28 @@ export default function StepInfo({currentStep, stepsLength}) {
             <div className="background-image"></div>
             <div className="steps">
                 {steps.map(step => 
-                    <div className={step === currentStep ? "step active" : "step"} key={step}>
-                        <span>{step}</span>
-                    </div>)}
+                    <div className="one-step" key={step}>
+                        <div className={step === currentStep ? "step active" : "step"}>
+                            <span>{step}</span>
+                        </div>
+                        <div className="step-text">
+                            <span>
+                                STEP {step}
+                            </span>
+                            <span>
+                                {
+                                    step === 1
+                                    ? "YOUR INFO"
+                                    : step === 2
+                                    ? "SELECT PLAN"
+                                    : step === 3
+                                    ? "ADD-ONS"
+                                    : "SUMMARY"
+                                }
+                            </span>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>       
     );

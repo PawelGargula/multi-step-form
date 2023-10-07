@@ -1,0 +1,29 @@
+@media (min-width: 1100px) {
+    #root {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    form {
+        background-color: white;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-columns: 250px auto;
+        grid-template-rows: auto 60px;
+        grid-template-areas:
+            "a b"
+            "a c";
+        width: 950px;
+        height: 550px;
+        padding: 1rem;
+        z-index: 0;
+    }
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+    :root {
+        font-size: 18px;
+    }
+}

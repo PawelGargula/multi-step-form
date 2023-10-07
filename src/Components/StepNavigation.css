@@ -37,3 +37,33 @@
 .step-navigation button.confirm {
     background-color: var(--purplish-blue);
 }
+
+@media (min-width: 1100px) {
+    .step-navigation {
+        grid-area: c;
+        padding: 1rem 6rem;
+        position: static;
+        width: auto;
+    }
+
+    .step-navigation button {
+        cursor: pointer;
+    }
+
+    .step-navigation :where(button.next, button.confirm) {
+        padding: .9rem .9rem;
+        width: 7rem;
+    }
+
+    .step-navigation button.back:hover {
+        color: var(--marine-blue);
+    }
+
+    .step-navigation button.next:hover {
+        background-color: hsla(213, 96%, 18%, .95);
+    }
+
+    .step-navigation button.confirm:hover {
+        background-color: hsl(243, 100%, 62%, .95);
+    }
+}

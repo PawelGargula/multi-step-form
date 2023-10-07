@@ -78,3 +78,15 @@ input[type="checkbox"]:checked+.checkbox-input .checkbox::after {
     font-weight: 500;
     margin-left: auto;
 }
+
+@media (min-width: 1100px) {
+    input[type="checkbox"]+.checkbox-input {
+        --padding-inline: 1.2rem;
+        cursor: pointer;
+        padding-block: 1rem;
+    }
+
+    input[type="checkbox"]+.checkbox-input:hover {
+        border-color: var(--purplish-blue);
+    }
+}

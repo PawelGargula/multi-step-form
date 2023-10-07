@@ -52,7 +52,7 @@ export default function FinishingUp({setCurrentStep}) {
             </div>
             <div className="total space-between">
                 <span className="total-tag">Total (per {watch("isYearly") ? "year" : "month"})</span>
-                <span className="total-cost">+${totalCost}/{watch("isYearly") ? "yo" : "mo"}</span>
+                <span className="total-cost">+${totalCost}/{watch("isYearly") ? "yr" : "mo"}</span>
             </div>
         </div>
     );
